@@ -2,14 +2,16 @@ import React from 'react';
 import {useRecoilValue} from 'recoil';
 import {ThemeProvider} from 'styled-components';
 import RootRouter from './route';
-import {themeState} from './atoms';
-import {BaseStyle, DarkTheme, LightTheme} from '@/global/Theme';
+import {themeSelector} from './atoms';
+import {BaseStyle} from '@/global/Theme';
+import {NavigationBar} from '@/global/components';
 
 export default function App() {
-  const themeValue = useRecoilValue(themeState);
+  const themeValue = useRecoilValue(themeSelector);
 
   return (
-    <ThemeProvider theme={themeValue ? DarkTheme : LightTheme}>
+    <ThemeProvider theme={themeValue}>
+      <NavigationBar />
       <RootRouter />
       <BaseStyle />
     </ThemeProvider>
