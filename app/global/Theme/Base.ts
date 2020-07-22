@@ -14,7 +14,7 @@ const BaseStyle = createGlobalStyle`
     border-color: ${({theme}) => theme.borderColor};
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     height: 100vh;
     margin: 0;
     padding: 0;

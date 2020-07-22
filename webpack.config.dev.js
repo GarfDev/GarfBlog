@@ -4,9 +4,6 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   devtool: 'eval-source-map',
-  output: {
-    ecmaVersion: 5,
-  },
   devServer: {
     port: 3000,
     historyApiFallback: true,
@@ -42,6 +39,14 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\[.ts$|.tsx$]/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          // eslint options (if necessary)
+        },
+      },
       {
         test: /\.(png|jpe?g|gif|ico)$/i,
         loader: 'file-loader',
