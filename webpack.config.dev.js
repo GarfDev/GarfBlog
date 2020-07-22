@@ -6,8 +6,8 @@ module.exports = {
   devtool: 'eval-source-map',
   devServer: {
     port: 3000,
-    historyApiFallback: true,
     publicPath: '/',
+    historyApiFallback: true,
     stats: {
       colors: true,
       hash: false,
@@ -27,8 +27,9 @@ module.exports = {
   },
   entry: './app/app',
   output: {
-    path: path.join(__dirname, '/build'),
+    path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],

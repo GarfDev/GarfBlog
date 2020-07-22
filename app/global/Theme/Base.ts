@@ -7,6 +7,10 @@ const BaseStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  #app {
+    width: 100%;
+  }
+
   body {
     align-items: center;
     background: ${({theme}) => theme.backgroundColor};

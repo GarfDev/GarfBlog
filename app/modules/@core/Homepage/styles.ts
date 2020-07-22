@@ -5,7 +5,7 @@ const Styles = {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 35vw;
+    width: 100%;
     padding: 15px;
   `,
 };
