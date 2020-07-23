@@ -8,7 +8,11 @@ import Markdown from 'react-markdown';
 import Styles from './styles';
 import {currentGist, gistDataSelector} from './atoms';
 import {wordMatchRegex} from './constants';
+import Link from './Link';
+import Heading from './Heading';
 import CodeBlock from './CodeBlock';
+import LineBreak from './LineBreak';
+import BlockQuote from './BlockQuote';
 import InlineCodeBlock from './InlineCodeBlock';
 
 export default function Post() {
@@ -39,7 +43,17 @@ export default function Post() {
           <Col xs={23} md={16} lg={8}>
             <Styles.GistTitle>{filename}.md</Styles.GistTitle>
             <Styles.MetaData>{Math.round(totalWords / 200)} min read ☕</Styles.MetaData>
-            <Markdown source={gistPost?.data} renderers={{code: CodeBlock, inlineCode: InlineCodeBlock}} />
+            <Markdown
+              source={gistPost?.data}
+              renderers={{
+                code: CodeBlock,
+                link: Link,
+                heading: Heading,
+                inlineCode: InlineCodeBlock,
+                blockquote: BlockQuote,
+                thematicBreak: LineBreak,
+              }}
+            />
           </Col>
         </Row>
       </Styles.PostContainer>
