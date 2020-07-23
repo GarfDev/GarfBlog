@@ -3,6 +3,7 @@ import {useRecoilState} from 'recoil';
 import {Row, Col} from 'antd';
 import {themeState} from '@/modules/@core/App/atoms';
 import Link from './Link';
+import Title from './PageTitle';
 import Styles from './styles';
 
 export default function NavigationBar() {
@@ -19,7 +20,7 @@ export default function NavigationBar() {
         <Col xs={23} md={16} lg={8}>
           <Styles.PageTitleContainer>
             <Styles.PageTitle>
-              <Link content="GARFDEV" url="/" />
+              <Title content="GARFDEV" url="/" />
               <Styles.StyledToggle icons={false} checked={currentThemeState} onChange={handleOnChangeState} />
             </Styles.PageTitle>
           </Styles.PageTitleContainer>

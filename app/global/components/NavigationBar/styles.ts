@@ -37,6 +37,10 @@ const Styles = {
       background-color: ${({theme}) => theme.hoverColor} !important;
     }
 
+    &.react-toggle--checked .react-toggle-track {
+      background-color: ${({theme}) => theme.hoverColor} !important;
+    }
+
     &.react-toggle-track {
       background-color: ${({theme}) => theme.hoverColor} !important;
     }
