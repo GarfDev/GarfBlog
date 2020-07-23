@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Helmet} from 'react-helmet';
 import {Row, Col} from 'antd';
 import {useParams} from 'react-router-dom';
 import {useRecoilValue, useSetRecoilState} from 'recoil';
@@ -28,14 +29,20 @@ export default function Post() {
   }, [gistHash, fileHash, filename, setGistDataURL]);
 
   return (
-    <Styles.PostContainer>
-      <Row justify="center">
-        <Col xs={23} md={16} lg={8}>
-          <Styles.GistTitle>{filename}.md</Styles.GistTitle>
-          <Styles.MetaData>{Math.round(totalWords / 200)} min read ☕</Styles.MetaData>
-          <Markdown source={gistPost?.data} renderers={{code: CodeBlock, inlineCode: InlineCodeBlock}} />
-        </Col>
-      </Row>
-    </Styles.PostContainer>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{filename} -- GarfDev</title>
+      </Helmet>
+      <Styles.PostContainer>
+        <Row justify="center">
+          <Col xs={23} md={16} lg={8}>
+            <Styles.GistTitle>{filename}.md</Styles.GistTitle>
+            <Styles.MetaData>{Math.round(totalWords / 200)} min read ☕</Styles.MetaData>
+            <Markdown source={gistPost?.data} renderers={{code: CodeBlock, inlineCode: InlineCodeBlock}} />
+          </Col>
+        </Row>
+      </Styles.PostContainer>
+    </>
   );
 }

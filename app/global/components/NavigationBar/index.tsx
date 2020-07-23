@@ -9,7 +9,7 @@ export default function NavigationBar() {
   const [currentThemeState, setThemeState] = useRecoilState(themeState);
 
   const handleOnChangeState = () => {
-    window.localStorage.setItem('theme', !currentThemeState);
+    window.localStorage.setItem('theme', JSON.stringify(!currentThemeState));
     setThemeState(!currentThemeState);
   };
 
