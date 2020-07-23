@@ -1,4 +1,5 @@
 import Styled from 'styled-components';
+import Toggle from 'react-toggle';
 
 const Styles = {
   NavigationContainer: Styled.header`
@@ -26,8 +27,23 @@ const Styles = {
     transition: all 0.25s linear;
   `,
   PageTitle: Styled.div`
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 500;
+  `,
+  StyledToggle: Styled(Toggle)`
+    &.react-toggle--checked .react-toggle-track {
+      background-color: #F3FAF6;
+      border-color: ${({theme}) => theme.color}
+      &.react-toggle-track {
+        background-color: #F3FAF6;
+      };
+      &.react-toggle-thumb {
+        border-color: ${({theme}) => theme.color}
+      };
+      &:hover {
+        background-color: #F3FAF6;
+      }
+    };
   `,
 };
 

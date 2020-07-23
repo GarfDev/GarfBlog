@@ -17,7 +17,7 @@ export default function InlineCodeBlock(props: Props) {
       language={props.language}
       style={currentThemeState ? darcula : prism}
       customStyle={{
-        transistionDuration: '0.5s',
+        transition: 'all 0.25s linear',
         display: 'inline',
         fontSize: '1em',
         margin: '5px',

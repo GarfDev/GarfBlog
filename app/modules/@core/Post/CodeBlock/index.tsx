@@ -17,7 +17,7 @@ export default function CodeBlock(props: Props) {
       language={props.language}
       style={currentThemeState ? darcula : prism}
       customStyle={{
-        transistionDuration: '0.5s',
+        transition: 'all 0.25s linear',
       }}>
       {props.value}
     </SyntaxHighlighter>
