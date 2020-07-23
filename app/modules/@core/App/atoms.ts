@@ -3,7 +3,7 @@ import {DarkTheme, LightTheme} from '@/global/Theme';
 
 export const themeState = atom({
   key: 'themeState', // unique ID (with respect to other atoms/selectors)
-  default: (window.localStorage.getItem('theme') || '') === 'dark', // default value (aka initial value)
+  default: (window.localStorage.getItem('theme') || '') === 'true', // default value (aka initial value)
 });
 
 export const themeSelector = selector({

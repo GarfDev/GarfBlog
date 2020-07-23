@@ -5,6 +5,7 @@ import RootRouter from './route';
 import {themeSelector} from './atoms';
 import {BaseStyle} from '@/global/Theme';
 import {NavigationBar} from '@/global/components';
+import 'react-toggle/style.css';
 
 export default function App() {
   const themeValue = useRecoilValue(themeSelector);
