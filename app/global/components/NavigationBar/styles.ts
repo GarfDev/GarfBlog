@@ -9,7 +9,7 @@ const Styles = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 60px;
     
   `,
   RoutingContainer: Styled.div<{marginFromTop: boolean}>`
