@@ -29,16 +29,10 @@ module.exports = {
       },
     },
   },
-  output: {
-    ecmaVersion: 5,
-  },
   entry: './app/app',
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
-  },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
   },
 
   module: {

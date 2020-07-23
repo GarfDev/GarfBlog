@@ -33,6 +33,7 @@
     "allowUnreachableCode": false,
     "noImplicitAny": true,
     "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,

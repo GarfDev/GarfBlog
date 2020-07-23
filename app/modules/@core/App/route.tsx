@@ -1,15 +1,16 @@
-import React, { Suspense } from 'react';
-import { Route } from 'react-router-dom';
+import React, {Suspense} from 'react';
+import {Route} from 'react-router-dom';
 // Import Resources
+import Homepage from '@/modules/@core/Homepage';
+import Post from '@/modules/@core/Post';
 
-function HelloWord() {
-  return <>Hello</>;
-}
+import 'antd/dist/antd.css';
 
 export default function RootRouter() {
   return (
     <Suspense fallback={<></>}>
-      <Route exact path="/" component={HelloWord} />
+      <Route exact path="/" component={Homepage} />
+      <Route path="/post/:gistHash/:fileHash/:filename" component={Post} />
     </Suspense>
   );
 }

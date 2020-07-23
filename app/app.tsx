@@ -1,21 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 // App
 import App from '@/modules/@core/App';
 // Cores
-import { RecoilRoot } from 'recoil';
+import {RecoilRoot} from 'recoil';
 // router
-import { BrowserRouter as Router } from 'react-router-dom';
-import GlobalStyle from './globalStyles';
-// configureStore
-const MOUNT_NODE = document.getElementById('app') as HTMLElement;
+import {BrowserRouter as Router} from 'react-router-dom';
+// configs
 
+const MOUNT_NODE = document.getElementById('app');
 ReactDOM.render(
   <RecoilRoot>
     <Router>
       <App />
-      <GlobalStyle />
     </Router>
   </RecoilRoot>,
   MOUNT_NODE,
@@ -23,9 +20,9 @@ ReactDOM.render(
 
 declare const module: any;
 if (module.hot) {
-  module.hot.accept([], () => {
-    ReactDOM.unmountComponentAtNode(MOUNT_NODE);
-  });
+  if (MOUNT_NODE) {
+    module.hot.accept([], () => ReactDOM.unmountComponentAtNode(MOUNT_NODE));
+  }
 }
 
 // Install ServiceWorker and AppCache in the end since

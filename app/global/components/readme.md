@@ -1,0 +1,1 @@
+- All components in here much have atleast accept className props (to be using with styled-components)
