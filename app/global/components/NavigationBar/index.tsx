@@ -8,11 +8,13 @@ export default function NavigationBar() {
     <Styles.NavigationContainer>
       <Row justify="center">
         <Col xs={23} md={16} lg={8}>
-          <Styles.Images src="https://i.imgur.com/EJRmBIE.png" width="100%" />
-          <Styles.RoutingContainer>
-            <Link content="Homepage" url="/" />
+          <Styles.PageTitleContainer>
+            <Styles.PageTitle>
+              <Link content="GARFDEV" url="/" />
+            </Styles.PageTitle>
+          </Styles.PageTitleContainer>
+          <Styles.RoutingContainer marginFromTop={true}>
             <Link content="Contact" url="/contact" />
-            <Link content="About me" url="/about" />
           </Styles.RoutingContainer>
         </Col>
       </Row>

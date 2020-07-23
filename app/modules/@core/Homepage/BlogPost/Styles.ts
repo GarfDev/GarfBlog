@@ -7,6 +7,12 @@ const Styles = {
     width: 100%;
     flex-direction: column;
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    &:hover {
+      color: ${({theme}) => theme.hoverColor};
+      transition: all 0.25s linear;
+    }
   `,
   Header: Styled.div`
     font-size: 1.25rem;

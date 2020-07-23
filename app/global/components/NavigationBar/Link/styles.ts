@@ -6,6 +6,7 @@ const Styles = {
     margin: 0px 10px;
     color: ${({theme}) => theme.color};
     border-bottom: 3px solid transparent;
+    
     transition: all 0.25s linear;
     &:hover {
       color: ${({theme}) => theme.color};

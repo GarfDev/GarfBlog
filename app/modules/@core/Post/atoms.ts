@@ -13,7 +13,7 @@ export const gistDataSelector = selector({
     const currentGistURL = get(currentGist);
     if (currentGist) {
       try {
-        const response: GistResponse = await axios.get(currentGistURL);
+        const response: GistResponse = await axios.get(`https://gist.githubusercontent.com/GarfDev${currentGistURL}`);
         return response;
       } catch {
         return undefined;

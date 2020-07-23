@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import {useHistory} from 'react-router-dom';
-// import {Card} from '@/global/components';
 import {Post} from './types';
 import Styles from './Styles';
 

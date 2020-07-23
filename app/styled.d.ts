@@ -5,6 +5,7 @@ declare module 'styled-components' {
     borderRadius?: string;
     backgroundColor?: string;
     borderColor?: string;
+    hoverColor?: string;
     color?: string;
   }
 }
