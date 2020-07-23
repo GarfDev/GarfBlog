@@ -6,7 +6,7 @@ const Styles = {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
   `,
 };
 

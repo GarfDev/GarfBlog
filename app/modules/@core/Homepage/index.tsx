@@ -12,7 +12,7 @@ export default function Homepage() {
   return (
     <>
       <Helmet>
-        <title>GarfDev -- A Personal Blog</title>
+        <title>GarfDev ─ A Personal Blog</title>
       </Helmet>
       <Styles.Container>
         <Row justify="center">
