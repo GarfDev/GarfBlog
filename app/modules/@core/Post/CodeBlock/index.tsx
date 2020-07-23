@@ -14,7 +14,7 @@ export default function CodeBlock(props: Props) {
 
   return (
     <SyntaxHighlighter
-      language={props.language}
+      language={props.language === 'javascript' ? 'jsx' : props.language}
       style={currentThemeState ? darcula : prism}
       customStyle={{
         transition: 'all 0.25s linear',

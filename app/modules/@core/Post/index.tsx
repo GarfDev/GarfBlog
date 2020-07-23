@@ -8,6 +8,7 @@ import Markdown from 'react-markdown';
 import Styles from './styles';
 import {currentGist, gistDataSelector} from './atoms';
 import {wordMatchRegex} from './constants';
+import Link from './Link';
 import Heading from './Heading';
 import CodeBlock from './CodeBlock';
 import LineBreak from './LineBreak';
@@ -46,6 +47,7 @@ export default function Post() {
               source={gistPost?.data}
               renderers={{
                 code: CodeBlock,
+                link: Link,
                 heading: Heading,
                 inlineCode: InlineCodeBlock,
                 blockquote: BlockQuote,

@@ -9,41 +9,58 @@ const Styles = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 50px;
     margin-top: 100px;
     
   `,
   RoutingContainer: Styled.div<{marginFromTop: boolean}>`
     display: flex;
     flex-wrap: wrap;
-    margin-top: ${props => (props.marginFromTop ? '10px' : '5px')};
-    margin-bottom: ${props => (props.marginFromTop ? '20px' : '5px')};
+    margin-bottom: ${props => (props.marginFromTop ? '30px' : '5px')};
     justify-content: flex-start;
-    margin: 0px 50px;
-    margin-bottom: 20px;
     font-size: 1rem;
   `,
   Images: Styled.img`
     transition: all 0.25s linear;
   `,
   PageTitle: Styled.div`
+    display: flex;
+    align-items: center;
     font-size: 2.5rem;
     font-weight: 500;
+
   `,
   StyledToggle: Styled(Toggle)`
+
+    &.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+      background-color: ${({theme}) => theme.hoverColor} !important;
+    }
+
+    &.react-toggle-track {
+      background-color: ${({theme}) => theme.hoverColor} !important;
+    }
+
+    &.react-toggle--checked .react-toggle-thumb {
+      background-color: ${({theme}) => theme.backgroundColor};
+      border-color: ${({theme}) => theme.backgroundColor} !important;
+      box-shadow: none !important;
+
+    };
+
+    &.react-toggle--focus .react-toggle-thumb {
+      box-shadow: none !important;
+    };
+
     &.react-toggle--checked .react-toggle-track {
       background-color: #F3FAF6;
       border-color: ${({theme}) => theme.color}
       &.react-toggle-track {
         background-color: #F3FAF6;
       };
-      &.react-toggle-thumb {
-        border-color: ${({theme}) => theme.color}
-      };
       &:hover {
         background-color: #F3FAF6;
       }
     };
+
   `,
 };
 

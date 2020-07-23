@@ -22,7 +22,7 @@ const BaseStyle = createGlobalStyle`
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Fira Code', monospace;
     transition: all 0.25s linear;
   }
 `;

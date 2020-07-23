@@ -10,11 +10,11 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 const MOUNT_NODE = document.getElementById('app');
 ReactDOM.render(
-  <RecoilRoot>
-    <Router>
+  <Router>
+    <RecoilRoot>
       <App />
-    </Router>
-  </RecoilRoot>,
+    </RecoilRoot>
+  </Router>,
   MOUNT_NODE,
 );
 

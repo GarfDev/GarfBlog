@@ -14,14 +14,13 @@ export default function InlineCodeBlock(props: Props) {
 
   return (
     <SyntaxHighlighter
-      language={props.language}
+      language="jsx"
       style={currentThemeState ? darcula : prism}
       customStyle={{
         transition: 'all 0.25s linear',
         display: 'inline',
         fontSize: '1em',
-        margin: '5px',
-        padding: '5px',
+        padding: '1px',
       }}>
       {props.value}
     </SyntaxHighlighter>
