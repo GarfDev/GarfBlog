@@ -10,7 +10,13 @@ module.exports = {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
   },
-  plugins: ['prettier', '@typescript-eslint', 'react-hooks', 'prettier', 'react'],
+  plugins: [
+    'prettier',
+    '@typescript-eslint',
+    'react-hooks',
+    'prettier',
+    'react',
+  ],
   globals: {},
   env: {
     jest: true,
@@ -22,6 +28,9 @@ module.exports = {
     react: {
       pragma: 'React',
       version: 'detect',
+    },
+    'import/resolver': {
+      alias: [['@', './app']],
     },
   },
   rules: {
@@ -49,7 +58,7 @@ module.exports = {
     'no-return-assign': 'warn',
     'array-callback-return': 'error',
     'guard-for-in': 'off',
-    'max-len': ['error', { code: 120 }],
+    'max-len': ['error', {code: 120}],
     '@typescript-eslint/class-name-casing': 'error',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
