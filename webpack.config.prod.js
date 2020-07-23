@@ -71,7 +71,8 @@ module.exports = {
       silent: true,
     }),
     new HtmlWebpackPlugin({
-      template: './app/index.html',
+      template: resolve(__dirname, 'build', 'index.html'),
+      filename: './index.html',
     }),
     new CompressionPlugin(),
   ],
