@@ -31,6 +31,8 @@ const Styles = {
   `,
   StyledToggle: Styled(Toggle)`
 
+    margin-bottom: 6px;
+
     &.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
       background-color: ${({theme}) => theme.hoverColor} !important;
     }
