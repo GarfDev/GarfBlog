@@ -8,6 +8,9 @@ const Styles = {
     flex-direction: column;
     margin-bottom: 15px;
     cursor: pointer;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
     transition: all 0.25s linear;
     &:hover {
       color: ${({theme}) => theme.hoverColor};
