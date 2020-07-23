@@ -38,6 +38,21 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\[.ts$|.tsx$]/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          // eslint options (if necessary)
+        },
+      },
+      {
+        test: /\.(png|jpe?g|gif|ico)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+      {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: {
@@ -47,13 +62,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|jpe?g|gif|ico)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
       },
     ],
   },
