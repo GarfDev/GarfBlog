@@ -10,7 +10,9 @@ const Styles = {
   GistTitle: Styled.div`
     font-size: 1.8rem;
     font-weight: 500;
-    
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
   `,
   MetaData: Styled.div`
     font-size: 1rem;
