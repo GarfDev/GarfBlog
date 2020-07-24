@@ -9,6 +9,7 @@ import Styles from './styles';
 import {currentGist, gistDataSelector} from './atoms';
 import {wordMatchRegex} from './constants';
 import Link from './Link';
+import Loading from '@/global/components/Loading';
 import Heading from './Heading';
 import CodeBlock from './CodeBlock';
 import LineBreak from './LineBreak';
@@ -31,6 +32,20 @@ export default function Post() {
   useEffect(() => {
     setGistDataURL(`/${gistHash}/raw/${fileHash}/${filename}.md`);
   }, [gistHash, fileHash, filename, setGistDataURL]);
+
+  if (!gistPost) {
+    return (
+      <>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{filename} -- GarfDev</title>
+        </Helmet>
+        <Styles.PostContainer>
+          <Loading />
+        </Styles.PostContainer>
+      </>
+    );
+  }
 
   return (
     <>
