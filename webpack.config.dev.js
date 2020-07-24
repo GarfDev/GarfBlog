@@ -25,7 +25,7 @@ module.exports = {
       publicPath: false,
     },
   },
-  entry: './app/app',
+  entry: ['react-hot-loader/patch', './app/app'],
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
@@ -74,7 +74,9 @@ module.exports = {
       safe: true,
     }),
     new HtmlWebpackPlugin({
-      template: './app/index.html',
+      template: path.resolve(__dirname, 'app', 'index.html'),
+      filename: './index.html',
+      favicon: './app/assests/favicon.ico',
     }),
   ],
 };

@@ -29,7 +29,7 @@ module.exports = {
       },
     },
   },
-  entry: './app/app',
+  entry: ['react-hot-loader/patch', './app/app'],
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
@@ -74,6 +74,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'app', 'index.html'),
       filename: './index.html',
+      favicon: './app/assests/favicon.ico',
     }),
     new CompressionPlugin(),
   ],

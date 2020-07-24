@@ -20,6 +20,7 @@ export default function CodeBlock(props: Props) {
         transition: 'all 0.25s linear',
         margin: '10px 0px',
         font: "'Ubuntu Mono', monospace",
+        fontSize: '1rem',
       }}>
       {props.value}
     </SyntaxHighlighter>
