@@ -18,6 +18,7 @@ export default function InlineCodeBlock(props: Props) {
       style={currentThemeState ? darcula : prism}
       customStyle={{
         transition: 'all 0.25s linear',
+        fontFamily: "'Ubuntu Mono', monospace",
         display: 'inline',
         fontSize: '1em',
         padding: '1px',

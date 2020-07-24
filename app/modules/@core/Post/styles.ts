@@ -5,7 +5,7 @@ const Styles = {
     width: 100%;
     height: 100%;
     padding: 20px;
-    font-size: 1rem;
+    font-size: 1.35rem;
   `,
   GistTitle: Styled.div`
     font-size: 1.8rem;

@@ -5,6 +5,7 @@ const Styles = {
   Title: Styled(Link)`
     margin: 0px 10px;
     color: ${({theme}) => theme.color};
+    font-weight: bold;
     border-bottom: 3px solid transparent;
     transition: all 0.25s linear;
     &:hover {

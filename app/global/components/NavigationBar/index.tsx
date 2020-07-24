@@ -17,7 +17,7 @@ export default function NavigationBar() {
   return (
     <Styles.NavigationContainer>
       <Row justify="center">
-        <Col xs={23} md={16} lg={12}>
+        <Col xs={23} md={16} lg={8}>
           <Styles.PageTitleContainer>
             <Styles.PageTitle>
               <Title content="GARFDEV" url="/" />

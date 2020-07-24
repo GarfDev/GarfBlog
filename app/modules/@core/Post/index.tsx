@@ -40,7 +40,7 @@ export default function Post() {
       </Helmet>
       <Styles.PostContainer>
         <Row justify="center">
-          <Col xs={23} md={16} lg={12}>
+          <Col xs={23} md={16} lg={8}>
             <Styles.GistTitle>{filename}.md</Styles.GistTitle>
             <Styles.MetaData>{Math.round(totalWords / 200)} min read ☕</Styles.MetaData>
             <Markdown

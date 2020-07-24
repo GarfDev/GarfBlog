@@ -18,6 +18,8 @@ export default function CodeBlock(props: Props) {
       style={currentThemeState ? darcula : prism}
       customStyle={{
         transition: 'all 0.25s linear',
+        margin: '10px 0px',
+        font: "'Ubuntu Mono', monospace",
       }}>
       {props.value}
     </SyntaxHighlighter>

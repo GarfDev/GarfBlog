@@ -16,7 +16,7 @@ export default function Homepage() {
       </Helmet>
       <Styles.Container>
         <Row justify="center">
-          <Col xs={23} md={16} lg={12}>
+          <Col xs={23} md={16} lg={8}>
             {gits.data.map((item: Post) => {
               return <BlogPost key={item.id} {...item} />;
             })}
