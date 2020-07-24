@@ -2,9 +2,12 @@ import Styled from 'styled-components';
 
 const Styles = {
   LineBreak: Styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
     width: 100%;
-    border-bottom: 3px solid;
-    margin: 10px 0px;
+    margin: 20px 0px;
   `,
 };
 
