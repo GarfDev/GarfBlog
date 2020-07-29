@@ -52,6 +52,7 @@ export default function Post() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{filename} -- GarfDev</title>
+        <meta name="description" content="A personal article in a personal blog." />
       </Helmet>
       <Styles.PostContainer>
         <Row justify="center">
